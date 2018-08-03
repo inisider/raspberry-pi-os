@@ -1,0 +1,4 @@
+when -mgeneral-regs-only is remoed I dont get any smd/fp register,
+so maybe need to use it manually.
+TODO:
+back  to this task later
