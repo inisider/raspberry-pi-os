@@ -16,6 +16,8 @@ void user_process1(char *array)
 			call_sys_write(buf);
 			delay(100000);
 		}
+		if (array[0] == '1')
+			printf("user_process1: get_cntl_ctl_el0() %d\n", get_cntl_ctl_el0());
 	}
 }
 
@@ -42,7 +44,8 @@ void user_process(){
 	if (err < 0){
 		printf("Error while clonning process 2\n\r");
 		return;
-	} 
+	}
+
 	call_sys_exit();
 }
 
